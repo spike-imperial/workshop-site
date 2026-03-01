@@ -144,21 +144,12 @@ function hasDetails(item: typeof workshop.schedule[number]) {
                   <span class="schedule-chevron font-[family-name:var(--font-jetbrains)] text-[10px] text-[#1a1a2e]/20 flex-shrink-0 transition-transform duration-200 select-none">&#9662;</span>
                 )}
 
-                {/* Links (shown inline when no abstract, i.e. no expand) */}
-                {!expandable && (item.slides !== undefined || item.recording !== undefined) && (
-                  <span class="flex gap-2 flex-shrink-0 hidden md:flex">
-                    {item.slides !== undefined && (
-                      <span class={`font-[family-name:var(--font-jetbrains)] text-[9px] tracking-wider uppercase ${item.slides ? 'text-[#1e3a5f] hover:text-[#c0533d] cursor-pointer transition-colors' : 'text-[#1a1a2e]/18'}`}>
-                        {item.slides ? 'pdf' : '—'}
-                      </span>
-                    )}
-                    {item.recording !== undefined && (
-                      <span class={`font-[family-name:var(--font-jetbrains)] text-[9px] tracking-wider uppercase ${item.recording ? 'text-[#1e3a5f] hover:text-[#c0533d] cursor-pointer transition-colors' : 'text-[#1a1a2e]/18'}`}>
-                        {item.recording ? 'vid' : '—'}
-                      </span>
-                    )}
-                  </span>
-                )}
+                {/* Type badge */}
+                <span class={`inline-block font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.15em] uppercase px-2 py-0.5 rounded-sm flex-shrink-0 hidden sm:inline-block ${colors.bg} ${colors.text}`}>
+                  {typeLabels[item.type]}
+                </span>
+
+
               </div>
             </div>
 
@@ -222,15 +213,15 @@ function hasDetails(item: typeof workshop.schedule[number]) {
                   {item.title}
                 </span>
 
-                {/* Type badge */}
-                <span class={`inline-block font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.15em] uppercase px-2 py-0.5 rounded-sm flex-shrink-0 hidden sm:inline-block ${colors.bg} ${colors.text}`}>
-                  {typeLabels[item.type]}
-                </span>
-
                 {/* Expand chevron */}
                 {expandable && (
                   <span class="schedule-chevron font-[family-name:var(--font-jetbrains)] text-[10px] text-[#1a1a2e]/20 flex-shrink-0 transition-transform duration-200 select-none">&#9662;</span>
                 )}
+
+                {/* Type badge */}
+                <span class={`inline-block font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.15em] uppercase px-2 py-0.5 rounded-sm flex-shrink-0 hidden sm:inline-block ${colors.bg} ${colors.text}`}>
+                  {typeLabels[item.type]}
+                </span>
               </div>
             </div>
 
