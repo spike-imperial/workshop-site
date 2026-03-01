@@ -4,6 +4,18 @@
   "date": "Friday 13th March 2026",
   "location": "Location TBC",
   "intro": "A one-day workshop bringing together researchers to explore the intersection of neural and symbolic approaches to AI. The morning features lightning talks from group members, followed by afternoon breakout sessions to discuss potential collaborations and future directions in neuro-symbolic AI.",
+  "speakers": [
+    { "name": "Prof. Alessandra Russo", "role": "Principal Investigator", "photo": "/speakers/arusso.jpg" },
+    { "name": "Dr. Dalal Alrajeh", "role": "Principal Investigator", "photo": "/speakers/dalrajeh.jpg" },
+    { "name": "Krysia Broda", "role": "Principal Investigator", "photo": "/speakers/kbroda.jpg" },
+    { "name": "Yaniv Aspis", "role": "PhD Student", "photo": "/speakers/yaspis.jpg" },
+    { "name": "Kexin Gu Baugh", "role": "PhD Student", "photo": "/speakers/kbaugh.jpg" },
+    { "name": "Leo Ardon", "role": "PhD Student", "photo": "/speakers/leoardon.png" },
+    { "name": "Charles Pert", "role": "PhD Student", "photo": "/speakers/cpert.jpg" },
+    { "name": "Frederik Kelbel", "role": "PhD Student", "photo": "/speakers/fkelbel.png" },
+    { "name": "Roko Parac", "role": "PhD Student", "photo": "/speakers/rparac.jpg" },
+    { "name": "Alex Spies", "role": "PhD Student", "photo": "/speakers/aspies.png" }
+  ],
   "schedule": [
     { "time": "09:00", "title": "Registration & Coffee", "type": "break" },
     { "time": "09:30", "title": "Welcome & Introduction", "speaker": "Prof. Alessandra Russo", "type": "talk" },

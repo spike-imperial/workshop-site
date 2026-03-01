@@ -49,7 +49,27 @@ Example — adding a new talk:
 { "time": "09:45", "title": "My Talk Title", "speaker": "Dr. Jane Smith", "type": "talk", "slides": null, "recording": null }
 ```
 
-Confirmed speakers (those with a name other than `"TBC"`) automatically appear in the **Speakers** section. The count of TBC speakers is shown as "+N speakers to be confirmed".
+The schedule uses colour-coded vertical bars to distinguish event types: red for talks, blue for sessions, and sand for breaks.
+
+### Update speakers
+
+The `speakers` array controls the Speakers section with profile photos:
+
+| Field   | Required | Description                                      |
+|---------|----------|--------------------------------------------------|
+| `name`  | yes      | Full name, e.g. `"Prof. Alessandra Russo"`       |
+| `role`  | yes      | Position, e.g. `"Principal Investigator"`        |
+| `photo` | yes      | Path to photo in `public/speakers/`, e.g. `"/speakers/arusso.jpg"` |
+
+Example — adding a new speaker:
+
+```json
+{ "name": "Dr. Jane Smith", "role": "Post-Doctoral Researcher", "photo": "/speakers/jsmith.jpg" }
+```
+
+Place the speaker's photo (square crop works best) in `public/speakers/`. Photos are displayed as circular cutouts with a subtle grayscale effect that lifts on hover.
+
+TBC speakers in the schedule (those with `"speaker": "TBC"`) are counted and shown as "+N speakers to be confirmed".
 
 ### Update logos
 
