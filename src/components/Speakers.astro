@@ -1,0 +1,47 @@
+---
+import workshop from "../data/workshop.json";
+
+const speakers = workshop.schedule
+  .filter((item) => item.speaker && item.speaker !== "TBC")
+  .map((item) => ({ name: item.speaker!, talk: item.title }));
+
+const tbc = workshop.schedule.filter((item) => item.speaker === "TBC").length;
+---
+
+<section id="speakers" class="px-6 py-24 max-w-3xl mx-auto">
+  <!-- Section divider -->
+  <div class="reveal flex items-center gap-4 mb-14">
+    <div class="h-px flex-1 bg-[#1a1a2e]/8"></div>
+    <div class="w-1.5 h-1.5 rotate-45 border border-[#c0533d]/40"></div>
+    <div class="h-px flex-1 bg-[#1a1a2e]/8"></div>
+  </div>
+
+  <div class="reveal mb-12">
+    <p class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.3em] uppercase text-[#c0533d] mb-3">Presenters</p>
+    <h2 class="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl text-[#1a1a2e] font-light">Speakers</h2>
+  </div>
+
+  {/* Confirmed speakers */}
+  <div class="space-y-0">
+    {speakers.map((s, i) => (
+      <div class={`reveal reveal-delay-${(i % 3) + 1} group py-5 border-b border-[#1a1a2e]/6 flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6 transition-colors duration-200 hover:bg-[#1e3a5f]/[0.02] -mx-4 px-4`}>
+        <h3 class="font-[family-name:var(--font-fraunces)] text-lg text-[#1a1a2e] font-normal flex-shrink-0">
+          {s.name}
+        </h3>
+        <div class="hidden sm:block h-px flex-1 bg-[#1a1a2e]/5 mt-1 group-hover:bg-[#1a1a2e]/10 transition-colors"></div>
+        <p class="font-[family-name:var(--font-source-serif)] text-sm text-[#1a1a2e]/40 italic flex-shrink-0">
+          {s.talk}
+        </p>
+      </div>
+    ))}
+  </div>
+
+  {/* TBC notice */}
+  {tbc > 0 && (
+    <div class="reveal reveal-delay-3 mt-8 py-6 border border-dashed border-[#1a1a2e]/10 text-center">
+      <p class="font-[family-name:var(--font-source-serif)] text-sm text-[#1a1a2e]/30 italic">
+        {tbc} additional speakers to be confirmed
+      </p>
+    </div>
+  )}
+</section>

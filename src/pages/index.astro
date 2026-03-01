@@ -1,0 +1,95 @@
+---
+import "../styles/global.css";
+import Base from "../layouts/Base.astro";
+import Hero from "../components/Hero.astro";
+import Schedule from "../components/Schedule.astro";
+import Speakers from "../components/Speakers.astro";
+import Venue from "../components/Venue.astro";
+
+const fonts = "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap";
+
+const navItems = [
+  { href: "#schedule", label: "Schedule" },
+  { href: "#speakers", label: "Speakers" },
+  { href: "#venue", label: "Venue" },
+  { href: "#register", label: "Register" },
+];
+---
+
+<Base title="Neuro-symbolic AI Workshop — SPIKE, Imperial College London" fonts={fonts} bodyClass="bg-[#f7f3ec] text-[#1a1a2e] font-[family-name:var(--font-source-serif)] antialiased">
+  <nav class="fixed inset-x-0 top-0 z-50 w-full bg-[#f7f3ec]/85 backdrop-blur-lg border-b border-[#1a1a2e]/[0.04]">
+    <div class="max-w-3xl mx-auto px-6 py-3.5 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
+        <img src="/spike-logo.svg" alt="SPIKE" class="h-4 opacity-50" />
+        <span class="font-[family-name:var(--font-fraunces)] text-sm text-[#1a1a2e]/70 tracking-tight">
+          NSAI Workshop 2026
+        </span>
+      </a>
+
+      {/* Desktop nav links */}
+      <div class="hidden sm:flex items-center gap-6">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.18em] uppercase text-[#1a1a2e]/35 hover:text-[#c0533d] transition-colors"
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+
+      {/* Mobile hamburger button */}
+      <button
+        id="mobile-menu-btn"
+        class="sm:hidden flex flex-col justify-center items-center w-8 h-8 gap-[5px] group"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <span class="block w-5 h-px bg-[#1a1a2e]/50 transition-all duration-300 origin-center group-[.open]:translate-y-[6px] group-[.open]:rotate-45"></span>
+        <span class="block w-5 h-px bg-[#1a1a2e]/50 transition-all duration-300 group-[.open]:opacity-0"></span>
+        <span class="block w-5 h-px bg-[#1a1a2e]/50 transition-all duration-300 origin-center group-[.open]:-translate-y-[6px] group-[.open]:-rotate-45"></span>
+      </button>
+    </div>
+
+    {/* Mobile dropdown menu */}
+    <div id="mobile-menu" class="sm:hidden hidden border-t border-[#1a1a2e]/[0.04] bg-[#f7f3ec]/95 backdrop-blur-lg">
+      <div class="max-w-3xl mx-auto px-6 py-4 flex flex-col gap-3">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class="mobile-nav-link font-[family-name:var(--font-jetbrains)] text-[10px] tracking-[0.2em] uppercase text-[#1a1a2e]/45 hover:text-[#c0533d] transition-colors py-2 border-b border-[#1a1a2e]/[0.04] last:border-0"
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    const btn = document.getElementById("mobile-menu-btn")!;
+    const menu = document.getElementById("mobile-menu")!;
+
+    btn.addEventListener("click", () => {
+      const open = btn.classList.toggle("open");
+      btn.setAttribute("aria-expanded", String(open));
+      menu.classList.toggle("hidden", !open);
+    });
+
+    // Close menu when a link is tapped
+    menu.querySelectorAll(".mobile-nav-link").forEach((link) => {
+      link.addEventListener("click", () => {
+        btn.classList.remove("open");
+        btn.setAttribute("aria-expanded", "false");
+        menu.classList.add("hidden");
+      });
+    });
+  </script>
+
+  <main>
+    <Hero />
+    <Schedule />
+    <Speakers />
+    <Venue />
+  </main>
+</Base>
