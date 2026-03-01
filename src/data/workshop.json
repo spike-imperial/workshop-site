@@ -2,7 +2,8 @@
   "title": "Neuro-symbolic AI Workshop",
   "subtitle": "SPIKE Research Group — Imperial College London",
   "date": "Friday 13th March 2026",
-  "location": "Location TBC",
+  "location": "Imperial College London",
+  "host": "SPIKE Research Group",
   "intro": "A one-day workshop bringing together researchers to explore the intersection of neural and symbolic approaches to AI. The morning features lightning talks from group members, followed by afternoon breakout sessions to discuss potential collaborations and future directions in neuro-symbolic AI.",
   "speakers": [
     { "name": "Prof. Alessandra Russo", "role": "Principal Investigator", "photo": "/speakers/arusso.jpg", "url": "https://wp.doc.ic.ac.uk/arusso/", "talk": "Welcome & Introduction" },
