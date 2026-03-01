@@ -22,10 +22,13 @@ const speakerSlugs = new Map(
   (workshop.speakers || []).map((s: { name: string }) => [s.name, slugify(s.name)])
 );
 
+// Filter out items with visible: false
+const visibleSchedule = workshop.schedule.filter((item) => item.visible !== false);
+
 // Split schedule into morning and afternoon
-const morningEnd = workshop.schedule.findIndex((item) => item.title === "Lunch");
-const morning = workshop.schedule.slice(0, morningEnd);
-const afternoon = workshop.schedule.slice(morningEnd);
+const morningEnd = visibleSchedule.findIndex((item) => item.title === "Lunch");
+const morning = visibleSchedule.slice(0, morningEnd);
+const afternoon = visibleSchedule.slice(morningEnd);
 
 function hasDetails(item: typeof workshop.schedule[number]) {
   return item.abstract || item.slides || item.recording;
