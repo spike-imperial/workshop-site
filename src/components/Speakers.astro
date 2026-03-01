@@ -3,57 +3,95 @@ import workshop from "../data/workshop.json";
 
 const speakers = workshop.speakers || [];
 
-// Count TBC speakers from schedule that aren't in the speakers list
-const scheduleSpeakers = workshop.schedule
-  .filter((item) => item.speaker && item.speaker !== "TBC")
-  .map((item) => item.speaker);
-const tbc = workshop.schedule.filter((item) => item.speaker === "TBC").length;
+function slugify(name: string): string {
+  return "speaker-" + name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
+// Build lookup from speaker name → schedule entry (for talk title + abstract)
+const speakerTalks = new Map(
+  workshop.schedule
+    .filter((item) => item.speaker && item.speaker !== "TBC")
+    .map((item) => [item.speaker, { title: item.title, abstract: item.abstract ?? null }])
+);
 ---
 
-<section id="speakers" class="px-6 py-24 max-w-3xl mx-auto">
+<section id="speakers" class="px-6 py-12 max-w-3xl mx-auto">
   <!-- Section divider -->
-  <div class="reveal flex items-center gap-4 mb-14">
+  <div class="reveal flex items-center gap-4 mb-10">
     <div class="h-px flex-1 bg-[#1a1a2e]/8"></div>
     <div class="w-1.5 h-1.5 rotate-45 border border-[#c0533d]/40"></div>
     <div class="h-px flex-1 bg-[#1a1a2e]/8"></div>
   </div>
 
-  <div class="reveal mb-12">
+  <div class="reveal mb-8">
     <p class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.3em] uppercase text-[#c0533d] mb-3">Presenters</p>
     <h2 class="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl text-[#1a1a2e] font-light">Speakers</h2>
   </div>
 
-  {/* Speaker grid */}
-  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-6 gap-y-10">
-    {speakers.map((s, i) => (
-      <div class={`reveal reveal-delay-${(i % 4) + 1} group text-center`}>
-        {/* Profile photo */}
-        <div class="relative mx-auto w-24 h-24 mb-4">
-          <div class="absolute inset-0 rounded-full bg-[#1a1a2e]/[0.04]"></div>
-          <img
-            src={s.photo}
-            alt={s.name}
-            class="relative w-24 h-24 rounded-full object-cover object-top grayscale-[30%] group-hover:grayscale-0 transition-all duration-500 ring-2 ring-[#1a1a2e]/[0.06] group-hover:ring-[#c0533d]/30"
-          />
-        </div>
-        {/* Name */}
-        <h3 class="font-[family-name:var(--font-fraunces)] text-[15px] text-[#1a1a2e] font-normal leading-snug">
-          {s.name}
-        </h3>
-        {/* Role */}
-        <p class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.12em] uppercase text-[#1a1a2e]/35 mt-1">
-          {s.role}
-        </p>
-      </div>
-    ))}
-  </div>
+  {/* Speaker list — hover dims siblings */}
+  <div class="speaker-list space-y-0">
+    {speakers.map((s, i) => {
+      const talk = speakerTalks.get(s.name);
+      return (
+        <div
+          id={slugify(s.name)}
+          class={`speaker-card reveal reveal-delay-${(i % 4) + 1} group flex items-center gap-5 px-4 py-3 -mx-4 rounded-md transition-all duration-300 border border-transparent hover:border-[#1a1a2e]/[0.06] hover:bg-white/60 hover:shadow-[0_1px_4px_rgba(0,0,0,0.04)]`}
+        >
+          {/* Profile photo */}
+          <div class="flex-shrink-0">
+            <img
+              src={s.photo}
+              alt={s.name}
+              class="w-14 h-14 rounded-full object-cover object-top grayscale-[30%] group-hover:grayscale-0 transition-all duration-500 ring-2 ring-[#1a1a2e]/[0.06] group-hover:ring-[#c0533d]/30"
+            />
+          </div>
 
-  {/* TBC notice */}
-  {tbc > 0 && (
-    <div class="reveal reveal-delay-3 mt-12 py-6 border border-dashed border-[#1a1a2e]/10 text-center">
-      <p class="font-[family-name:var(--font-source-serif)] text-sm text-[#1a1a2e]/30 italic">
-        +{tbc} additional speakers to be confirmed
-      </p>
-    </div>
-  )}
+          {/* Info */}
+          <div class="min-w-0 flex-1">
+            <div class="flex items-baseline gap-3">
+              {/* Name */}
+              <h3 class="font-[family-name:var(--font-fraunces)] text-[15px] text-[#1a1a2e] font-normal leading-snug">
+                {s.url ? (
+                  <a
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="underline decoration-[#c0533d]/30 underline-offset-2 hover:decoration-[#c0533d] transition-colors duration-200"
+                  >
+                    {s.name}
+                  </a>
+                ) : (
+                  s.name
+                )}
+              </h3>
+              {/* Role */}
+              <p class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.12em] uppercase text-[#1a1a2e]/35 hidden sm:block">
+                {s.role}
+              </p>
+            </div>
+
+            {/* Talk title — always visible if assigned */}
+            {(s.talk || talk?.title) && (
+              <p class="font-[family-name:var(--font-source-serif)] text-[13px] text-[#1a1a2e]/45 italic mt-0.5">
+                {s.talk || talk?.title}
+              </p>
+            )}
+
+            {/* Abstract — revealed on hover */}
+            {talk?.abstract && (
+              <p class="speaker-abstract font-[family-name:var(--font-source-serif)] text-[12px] text-[#1a1a2e]/40 leading-relaxed mt-1.5 max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-300">
+                <span class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.12em] uppercase text-[#1a1a2e]/30 mr-1.5">Abstract:</span>{talk.abstract}
+              </p>
+            )}
+          </div>
+        </div>
+      );
+    })}
+  </div>
 </section>
+
+<style>
+  .speaker-list:hover .speaker-card:not(:hover) {
+    opacity: 0.5;
+  }
+</style>
