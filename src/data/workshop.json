@@ -1,0 +1,26 @@
+{
+  "title": "Neuro-symbolic AI Workshop",
+  "subtitle": "SPIKE Research Group — Imperial College London",
+  "date": "Friday 13th March 2026",
+  "location": "Location TBC",
+  "intro": "A one-day workshop bringing together researchers to explore the intersection of neural and symbolic approaches to AI. The morning features lightning talks from group members, followed by afternoon breakout sessions to discuss potential collaborations and future directions in neuro-symbolic AI.",
+  "schedule": [
+    { "time": "09:00", "title": "Registration & Coffee", "type": "break" },
+    { "time": "09:30", "title": "Welcome & Introduction", "speaker": "Prof. Alessandra Russo", "type": "talk" },
+    { "time": "09:45", "title": "Lightning Talk 1", "speaker": "TBC", "type": "talk", "slides": null, "recording": null },
+    { "time": "10:00", "title": "Lightning Talk 2", "speaker": "TBC", "type": "talk", "slides": null, "recording": null },
+    { "time": "10:15", "title": "Lightning Talk 3", "speaker": "TBC", "type": "talk", "slides": null, "recording": null },
+    { "time": "10:30", "title": "Coffee Break", "type": "break" },
+    { "time": "11:00", "title": "Lightning Talk 4", "speaker": "TBC", "type": "talk", "slides": null, "recording": null },
+    { "time": "11:15", "title": "Lightning Talk 5", "speaker": "TBC", "type": "talk", "slides": null, "recording": null },
+    { "time": "11:30", "title": "Lightning Talk 6", "speaker": "TBC", "type": "talk", "slides": null, "recording": null },
+    { "time": "11:45", "title": "Discussion & Q&A", "type": "talk" },
+    { "time": "12:15", "title": "Lunch", "type": "break" },
+    { "time": "13:30", "title": "Breakout Groups — Topic Selection", "type": "session" },
+    { "time": "14:00", "title": "Breakout Session 1: Collaborations", "type": "session" },
+    { "time": "15:00", "title": "Coffee Break", "type": "break" },
+    { "time": "15:30", "title": "Breakout Session 2: Future Directions", "type": "session" },
+    { "time": "16:30", "title": "Group Reports & Wrap-up", "type": "session" },
+    { "time": "17:00", "title": "Close & Drinks", "type": "break" }
+  ]
+}

@@ -1,0 +1,53 @@
+---
+interface Props {
+  title: string;
+  fonts?: string;
+  bodyClass?: string;
+}
+
+const { title, fonts = "", bodyClass = "" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Neuro-symbolic AI Workshop — SPIKE Research Group, Imperial College London" />
+    <title>{title}</title>
+    {fonts && <link rel="stylesheet" href={fonts} />}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body class={bodyClass}>
+    <slot />
+    <script>
+      // On load, immediately show any .reveal elements already in viewport
+      // (e.g. user navigated via anchor link). Only animate elements below.
+      const reveals = document.querySelectorAll(".reveal");
+      reveals.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 50) {
+          el.classList.add("visible", "no-transition");
+        }
+      });
+
+      // After the initial pass, observe remaining hidden elements for scroll-reveal
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.remove("no-transition");
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+      );
+      reveals.forEach((el) => {
+        if (!el.classList.contains("visible")) observer.observe(el);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+---
+import workshop from "../data/workshop.json";
+
+const typeLabels: Record<string, string> = {
+  break: "Break",
+  talk: "Talk",
+  session: "Session",
+};
+
+// Split schedule into morning and afternoon
+const morningEnd = workshop.schedule.findIndex((item) => item.title === "Lunch");
+const morning = workshop.schedule.slice(0, morningEnd);
+const afternoon = workshop.schedule.slice(morningEnd);
+---
+
+<section id="schedule" class="px-6 py-24 max-w-3xl mx-auto">
+  <div class="reveal mb-14">
+    <p class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.3em] uppercase text-[#c0533d] mb-3">Programme</p>
+    <h2 class="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl text-[#1a1a2e] font-light">Schedule</h2>
+    <p class="font-[family-name:var(--font-source-serif)] text-sm text-[#1a1a2e]/40 mt-3 italic">
+      Morning lightning talks, afternoon breakout sessions
+    </p>
+  </div>
+
+  {/* Morning block */}
+  <div class="reveal reveal-delay-1 mb-12">
+    <div class="flex items-center gap-4 mb-6">
+      <p class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.25em] uppercase text-[#1e3a5f]/50 whitespace-nowrap">Morning</p>
+      <div class="h-px flex-1 bg-[#1a1a2e]/8"></div>
+    </div>
+
+    <table class="w-full border-collapse">
+      <thead>
+        <tr class="border-b-2 border-[#1a1a2e]/80">
+          <th class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.2em] uppercase text-[#1a1a2e]/40 text-left py-2.5 pr-4 w-16">Time</th>
+          <th class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.2em] uppercase text-[#1a1a2e]/40 text-left py-2.5 pr-4">Event</th>
+          <th class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.2em] uppercase text-[#1a1a2e]/40 text-left py-2.5 pr-4 hidden sm:table-cell">Speaker</th>
+          <th class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.2em] uppercase text-[#1a1a2e]/40 text-right py-2.5 hidden md:table-cell w-20">Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        {morning.map((item, i) => (
+          <tr class={`border-b border-[#1a1a2e]/6 transition-colors duration-200 hover:bg-[#1e3a5f]/[0.025] ${i % 2 === 0 ? 'bg-[#1a1a2e]/[0.012]' : ''}`}>
+            <td class={`font-[family-name:var(--font-jetbrains)] text-[13px] py-3.5 pr-4 tabular-nums align-top ${item.type === 'break' ? 'text-[#1a1a2e]/30' : 'text-[#1a1a2e]/45'}`}>
+              {item.time}
+            </td>
+            <td class="py-3.5 pr-4 align-top">
+              <span class={`font-[family-name:var(--font-source-serif)] text-[15px] ${item.type === 'break' ? 'text-[#1a1a2e]/35 italic' : 'text-[#1a1a2e]'}`}>
+                {item.title}
+              </span>
+              {item.speaker && (
+                <span class="font-[family-name:var(--font-source-serif)] text-[13px] text-[#1a1a2e]/35 sm:hidden block mt-0.5">
+                  {item.speaker}
+                </span>
+              )}
+            </td>
+            <td class="font-[family-name:var(--font-source-serif)] text-[13px] text-[#1a1a2e]/45 py-3.5 pr-4 align-top hidden sm:table-cell">
+              {item.speaker ? (
+                <span class={item.speaker === 'TBC' ? 'italic text-[#1a1a2e]/25' : ''}>{item.speaker}</span>
+              ) : (
+                <span class="text-[#1a1a2e]/15">—</span>
+              )}
+            </td>
+            <td class="py-3.5 text-right align-top hidden md:table-cell">
+              {(item.slides !== undefined || item.recording !== undefined) && (
+                <span class="flex gap-2 justify-end">
+                  {item.slides !== undefined && (
+                    <span class={`font-[family-name:var(--font-jetbrains)] text-[9px] tracking-wider uppercase ${item.slides ? 'text-[#1e3a5f] hover:text-[#c0533d] cursor-pointer transition-colors' : 'text-[#1a1a2e]/18'}`}>
+                      {item.slides ? 'pdf' : '—'}
+                    </span>
+                  )}
+                  {item.recording !== undefined && (
+                    <span class={`font-[family-name:var(--font-jetbrains)] text-[9px] tracking-wider uppercase ${item.recording ? 'text-[#1e3a5f] hover:text-[#c0533d] cursor-pointer transition-colors' : 'text-[#1a1a2e]/18'}`}>
+                      {item.recording ? 'vid' : '—'}
+                    </span>
+                  )}
+                </span>
+              )}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  {/* Afternoon block */}
+  <div class="reveal reveal-delay-2">
+    <div class="flex items-center gap-4 mb-6">
+      <p class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.25em] uppercase text-[#1e3a5f]/50 whitespace-nowrap">Afternoon</p>
+      <div class="h-px flex-1 bg-[#1a1a2e]/8"></div>
+    </div>
+
+    <table class="w-full border-collapse">
+      <thead>
+        <tr class="border-b-2 border-[#1a1a2e]/80">
+          <th class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.2em] uppercase text-[#1a1a2e]/40 text-left py-2.5 pr-4 w-16">Time</th>
+          <th class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.2em] uppercase text-[#1a1a2e]/40 text-left py-2.5 pr-4">Event</th>
+          <th class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.2em] uppercase text-[#1a1a2e]/40 text-right py-2.5 hidden sm:table-cell w-20">Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        {afternoon.map((item, i) => (
+          <tr class={`border-b border-[#1a1a2e]/6 transition-colors duration-200 hover:bg-[#1e3a5f]/[0.025] ${i % 2 === 0 ? 'bg-[#1a1a2e]/[0.012]' : ''}`}>
+            <td class={`font-[family-name:var(--font-jetbrains)] text-[13px] py-3.5 pr-4 tabular-nums align-top ${item.type === 'break' ? 'text-[#1a1a2e]/30' : 'text-[#1a1a2e]/45'}`}>
+              {item.time}
+            </td>
+            <td class="py-3.5 pr-4 align-top">
+              <span class={`font-[family-name:var(--font-source-serif)] text-[15px] ${item.type === 'break' ? 'text-[#1a1a2e]/35 italic' : 'text-[#1a1a2e]'}`}>
+                {item.title}
+              </span>
+            </td>
+            <td class="hidden sm:table-cell py-3.5 text-right align-top">
+              <span class={`inline-block font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.15em] uppercase px-2 py-0.5 rounded-sm ${
+                item.type === 'session' ? 'bg-[#1e3a5f]/8 text-[#1e3a5f]/50' :
+                item.type === 'break' ? 'text-[#1a1a2e]/20' :
+                'text-[#1a1a2e]/30'
+              }`}>
+                {typeLabels[item.type]}
+              </span>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>

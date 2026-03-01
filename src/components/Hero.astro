@@ -1,0 +1,58 @@
+---
+import workshop from "../data/workshop.json";
+---
+
+<section id="top" class="relative px-6 pt-36 pb-24 max-w-3xl mx-auto">
+  <!-- Subtle paper texture overlay -->
+  <div class="absolute inset-0 -z-10 opacity-[0.015]" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%224%22 height=%224%22><rect width=%224%22 height=%224%22 fill=%22%231a1a2e%22 fill-opacity=%220.4%22/><rect x=%220%22 y=%220%22 width=%221%22 height=%221%22 fill=%22%231a1a2e%22 fill-opacity=%220.2%22/></svg>');"></div>
+
+  <div class="reveal">
+    <p class="font-[family-name:var(--font-jetbrains)] text-[10px] tracking-[0.3em] uppercase text-[#c0533d] mb-10">
+      SPIKE Research Group &ensp;&middot;&ensp; Imperial College London
+    </p>
+  </div>
+
+  <!-- Ornamental rule -->
+  <div class="reveal reveal-delay-1 flex items-center gap-4 mb-10">
+    <div class="h-px flex-1 bg-[#1a1a2e]/10"></div>
+    <div class="w-1.5 h-1.5 rotate-45 border border-[#c0533d]/40"></div>
+    <div class="h-px flex-1 bg-[#1a1a2e]/10"></div>
+  </div>
+
+  <h1 class="reveal reveal-delay-1 font-[family-name:var(--font-fraunces)] text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] text-[#1a1a2e] leading-[1.02] mb-3 font-light tracking-[-0.01em]" style="font-variation-settings: 'SOFT' 100, 'WONK' 1;">
+    Neuro-symbolic
+  </h1>
+  <h1 class="reveal reveal-delay-2 font-[family-name:var(--font-fraunces)] text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] text-[#1a1a2e] leading-[1.02] mb-10 font-light tracking-[-0.01em] italic" style="font-variation-settings: 'SOFT' 100, 'WONK' 1;">
+    AI Workshop
+  </h1>
+
+  <!-- Ornamental rule -->
+  <div class="reveal reveal-delay-2 flex items-center gap-4 mb-10">
+    <div class="h-px flex-1 bg-[#1a1a2e]/10"></div>
+    <div class="w-1.5 h-1.5 rotate-45 border border-[#c0533d]/40"></div>
+    <div class="h-px flex-1 bg-[#1a1a2e]/10"></div>
+  </div>
+
+  <!-- Key details in a refined row -->
+  <div class="reveal reveal-delay-3 grid grid-cols-1 sm:grid-cols-3 gap-8 mb-14">
+    <div class="text-center sm:text-left">
+      <p class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.25em] uppercase text-[#1a1a2e]/35 mb-1.5">Date</p>
+      <p class="font-[family-name:var(--font-source-serif)] text-base text-[#1a1a2e]">{workshop.date}</p>
+    </div>
+    <div class="text-center sm:text-left sm:border-l sm:border-[#1a1a2e]/8 sm:pl-8">
+      <p class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.25em] uppercase text-[#1a1a2e]/35 mb-1.5">Venue</p>
+      <p class="font-[family-name:var(--font-source-serif)] text-base text-[#1a1a2e]">{workshop.location}</p>
+    </div>
+    <div class="text-center sm:text-left sm:border-l sm:border-[#1a1a2e]/8 sm:pl-8">
+      <p class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.25em] uppercase text-[#1a1a2e]/35 mb-1.5">Host</p>
+      <p class="font-[family-name:var(--font-source-serif)] text-base text-[#1a1a2e]">Imperial College London</p>
+    </div>
+  </div>
+
+  <!-- Intro with drop cap feel -->
+  <div class="reveal reveal-delay-4 max-w-2xl">
+    <p class="font-[family-name:var(--font-source-serif)] text-[1.15rem] text-[#1a1a2e]/65 leading-[1.75] first-letter:font-[family-name:var(--font-fraunces)] first-letter:text-[3.2rem] first-letter:leading-[0.8] first-letter:float-left first-letter:mr-3 first-letter:mt-1.5 first-letter:text-[#1a1a2e] first-letter:font-light">
+      {workshop.intro}
+    </p>
+  </div>
+</section>
