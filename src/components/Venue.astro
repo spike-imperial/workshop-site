@@ -2,15 +2,15 @@
 import workshop from "../data/workshop.json";
 ---
 
-<section id="venue" class="px-6 py-24 max-w-3xl mx-auto">
+<section id="venue" class="px-6 py-12 max-w-3xl mx-auto">
   <!-- Section divider -->
-  <div class="reveal flex items-center gap-4 mb-14">
+  <div class="reveal flex items-center gap-4 mb-10">
     <div class="h-px flex-1 bg-[#1a1a2e]/8"></div>
     <div class="w-1.5 h-1.5 rotate-45 border border-[#c0533d]/40"></div>
     <div class="h-px flex-1 bg-[#1a1a2e]/8"></div>
   </div>
 
-  <div class="reveal mb-12">
+  <div class="reveal mb-8">
     <p class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.3em] uppercase text-[#c0533d] mb-3">Getting There</p>
     <h2 class="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl text-[#1a1a2e] font-light">Venue</h2>
   </div>
@@ -35,7 +35,15 @@ import workshop from "../data/workshop.json";
         </div>
         <div>
           <p class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.25em] uppercase text-[#1a1a2e]/30 mb-1.5">Contact</p>
-          <p class="font-[family-name:var(--font-source-serif)] text-[15px] text-[#1e3a5f]">spike@imperial.ac.uk</p>
+          <p id="contact-email" class="font-[family-name:var(--font-source-serif)] text-[15px] text-[#1e3a5f]">
+            <span class="select-none" aria-hidden="true">doc-spike</span><!--
+            --><span class="hidden">REMOVE</span><!--
+            --><span class="select-none" aria-hidden="true">&#64;</span><!--
+            --><span class="select-none" aria-hidden="true">imperial.ac.uk</span>
+          </p>
+          <script>
+            {const el=document.getElementById('contact-email');if(el){const a=document.createElement('a');const u=['doc-spike','imperial.ac.uk'].join('@');a.href='mai'+'lto:'+u;a.textContent=u;a.className='hover:underline decoration-[#c0533d]/30 underline-offset-2 hover:decoration-[#c0533d] transition-colors duration-200';el.replaceChildren(a);}}
+          </script>
         </div>
       </div>
     </div>
@@ -43,7 +51,7 @@ import workshop from "../data/workshop.json";
 </section>
 
 {/* Registration CTA */}
-<section id="register" class="px-6 py-20 max-w-3xl mx-auto">
+<section id="register" class="px-6 py-12 max-w-3xl mx-auto">
   <div class="reveal text-center py-16 border-y border-[#1a1a2e]/8">
     <p class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.3em] uppercase text-[#c0533d] mb-4">Join Us</p>
     <h2 class="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl text-[#1a1a2e] font-light mb-4 italic" style="font-variation-settings: 'SOFT' 100, 'WONK' 1;">
@@ -53,7 +61,9 @@ import workshop from "../data/workshop.json";
       The workshop is open to members of the SPIKE research group and invited collaborators. To register your interest, please get in touch.
     </p>
     <a
-      href="mailto:spike@imperial.ac.uk?subject=Neuro-symbolic AI Workshop — Registration"
+      href="https://forms.office.com/e/hYZRMZbUy0"
+      target="_blank"
+      rel="noopener noreferrer"
       class="inline-block font-[family-name:var(--font-jetbrains)] text-[11px] tracking-[0.2em] uppercase px-8 py-3.5 bg-[#1e3a5f] text-[#f7f3ec] hover:bg-[#162d4a] transition-colors duration-200"
     >
       Register Interest

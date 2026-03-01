@@ -40,16 +40,17 @@ Each entry in the `schedule` array has:
 | `title`     | yes      | Event name                                     |
 | `type`      | yes      | `"break"`, `"talk"`, or `"session"`            |
 | `speaker`   | no       | Speaker name (use `"TBC"` as placeholder)      |
+| `abstract`  | no       | Talk abstract text, or `null` if not yet available |
 | `slides`    | no       | URL to slides PDF, or `null` if not yet available |
 | `recording` | no       | URL to recording, or `null` if not yet available  |
 
 Example — adding a new talk:
 
 ```json
-{ "time": "09:45", "title": "My Talk Title", "speaker": "Dr. Jane Smith", "type": "talk", "slides": null, "recording": null }
+{ "time": "09:45", "title": "My Talk Title", "speaker": "Dr. Jane Smith", "type": "talk", "abstract": "A brief description of the talk.", "slides": null, "recording": null }
 ```
 
-The schedule uses colour-coded vertical bars to distinguish event types: red for talks, blue for sessions, and sand for breaks.
+The schedule uses colour-coded vertical bars to distinguish event types: red for talks, blue for sessions, and sand for breaks. Talks with an abstract, slides, or recording are expandable — click the row to reveal details.
 
 ### Update speakers
 
@@ -60,16 +61,16 @@ The `speakers` array controls the Speakers section with profile photos:
 | `name`  | yes      | Full name, e.g. `"Prof. Alessandra Russo"`       |
 | `role`  | yes      | Position, e.g. `"Principal Investigator"`        |
 | `photo` | yes      | Path to photo in `public/speakers/`, e.g. `"/speakers/arusso.jpg"` |
+| `url`   | no       | URL to personal page, or `null` if not available |
+| `talk`  | no       | Talk title from the schedule, or `null` if TBC   |
 
 Example — adding a new speaker:
 
 ```json
-{ "name": "Dr. Jane Smith", "role": "Post-Doctoral Researcher", "photo": "/speakers/jsmith.jpg" }
+{ "name": "Dr. Jane Smith", "role": "Post-Doctoral Researcher", "photo": "/speakers/jsmith.jpg", "url": "https://example.com", "talk": "My Talk Title" }
 ```
 
-Place the speaker's photo (square crop works best) in `public/speakers/`. Photos are displayed as circular cutouts with a subtle grayscale effect that lifts on hover.
-
-TBC speakers in the schedule (those with `"speaker": "TBC"`) are counted and shown as "+N speakers to be confirmed".
+Place the speaker's photo (square crop works best) in `public/speakers/`. Photos are displayed as circular cutouts with a subtle grayscale effect that lifts on hover. Speaker names with a `url` link out to their personal page. Confirmed speaker names in the schedule link down to the speakers section.
 
 ### Update logos
 
