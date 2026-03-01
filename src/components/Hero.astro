@@ -55,4 +55,19 @@ import workshop from "../data/workshop.json";
       {workshop.intro}
     </p>
   </div>
+
+  <!-- Workshop aims -->
+  {workshop.aims && (
+    <div class="reveal reveal-delay-4 max-w-2xl mt-8">
+    <p class="font-[family-name:var(--font-source-serif)] text-[1.05rem] text-[#1a1a2e]/65 leading-[1.65] mb-4">This workshop will aim to:</p>
+    <ul class="space-y-3 list-none pl-0">
+      {workshop.aims.map((aim: string) => (
+        <li class="font-[family-name:var(--font-source-serif)] text-[1.05rem] text-[#1a1a2e]/65 leading-[1.65] pl-6 relative">
+          <span class="absolute left-0 top-0 text-[#c0533d]/50">&mdash;</span>
+          {aim}
+        </li>
+      ))}
+    </ul>
+    </div>
+  )}
 </section>

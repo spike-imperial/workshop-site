@@ -55,7 +55,7 @@ function prop(name: string, value: string): string {
 
 function generateICS(): string {
   const isoDate = parseDateISO(workshop.date);
-  const schedule = workshop.schedule;
+  const schedule = workshop.schedule.filter((item: any) => item.visible !== false);
   const now = new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
 
   const vevents = schedule.map((item, i) => {
