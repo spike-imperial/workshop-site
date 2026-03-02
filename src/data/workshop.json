@@ -11,7 +11,7 @@
     "Identify opportunities for collaboration, particularly around upcoming UK and EU funding calls"
   ],
   "speakers": [
-    { "name": "Prof. Alessandra Russo", "role": "Principal Investigator", "affiliation": "Imperial College London", "photo": "/speakers/arusso.jpg", "url": "https://wp.doc.ic.ac.uk/arusso/", "talk": "Welcome & Introduction" },
+    { "name": "Prof. Alessandra Russo", "role": "Principal Investigator", "affiliation": "Imperial College London", "photo": "/speakers/arusso.jpg", "url": "https://wp.doc.ic.ac.uk/arusso/", "talk": "Welcome & Introduction", "visible": false },
     { "name": "Luis Lamb", "role": "Invited Keynote Speaker", "affiliation": "Catholic Institute of Technology", "photo": "/speakers/llamb.jpg", "url": null, "talk": "Invited Keynote" },
     { "name": "Kexin Gu Baugh", "role": "Group Alumnus", "affiliation": null, "photo": "/speakers/kbaugh.jpg", "url": "https://kittykg.github.io/", "talk": null, "visible": false },
     { "name": "Leo Ardon", "role": "PhD Student", "affiliation": "Imperial College London", "photo": "/speakers/leoardon.png", "url": "https://github.com/leoardon", "talk": null, "visible": false },
