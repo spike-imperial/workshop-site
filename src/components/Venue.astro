@@ -2,7 +2,7 @@
 import workshop from "../data/workshop.json";
 ---
 
-<section id="venue" class="px-6 py-12 max-w-3xl mx-auto">
+<section id="venue" class="px-6 py-12 max-w-4xl mx-auto">
   <!-- Section divider -->
   <div class="reveal flex items-center gap-4 mb-10">
     <div class="h-px flex-1 bg-[#1a1a2e]/8"></div>
@@ -15,33 +15,39 @@ import workshop from "../data/workshop.json";
     <h2 class="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl text-[#1a1a2e] font-light">Venue</h2>
   </div>
 
-  <div class="reveal reveal-delay-1 bg-white p-8 md:p-10 border border-[#1a1a2e]/6 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-    <div class="grid sm:grid-cols-2 gap-8">
-      <div>
-        <h3 class="font-[family-name:var(--font-fraunces)] text-xl text-[#1a1a2e] font-normal mb-3">Imperial College London (White City Campus)</h3>
-        <p class="font-[family-name:var(--font-source-serif)] text-[15px] text-[#1a1a2e]/50 leading-relaxed mb-4">
-          Translation & Innovation Hub<br />
-          84 Wood Ln<br />
-          London W12 0BZ<br />
-      </div>
-      <div class="flex flex-col gap-4">
-        <div>
-          <p class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.25em] uppercase text-[#1a1a2e]/30 mb-1.5">Nearest Tube</p>
-          <p class="font-[family-name:var(--font-source-serif)] text-[15px] text-[#1a1a2e]/60">White City &middot; Wood Lane</p>
+  <div class="reveal reveal-delay-1 bg-white border border-[#1a1a2e]/6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] overflow-hidden">
+    <div class="grid md:grid-cols-[1fr_auto]">
+      <div class="p-8 md:p-10">
+        <div class="grid sm:grid-cols-2 gap-8">
+          <div>
+            <h3 class="font-[family-name:var(--font-fraunces)] text-xl text-[#1a1a2e] font-normal">Imperial College London</h3>
+            <h3 class="font-[family-name:var(--font-fraunces)] text-xl text-[#1a1a2e] font-normal mb-3">(White City Campus)</h3>
+            <p class="font-[family-name:var(--font-source-serif)] text-[15px] text-[#1a1a2e]/50 leading-relaxed mb-4">
+              I-HUB (Translation & Innovation Hub)<br />
+              84 Wood Ln<br />
+              London W12 0BZ<br />
+          </div>
+          <div class="flex flex-col gap-4">
+            <div>
+              <p class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.25em] uppercase text-[#1a1a2e]/30 mb-1.5">Nearest Tube</p>
+              <p class="font-[family-name:var(--font-source-serif)] text-[15px] text-[#1a1a2e]/60">White City &middot; Wood Lane</p>
+            </div>
+            <div>
+              <p class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.25em] uppercase text-[#1a1a2e]/30 mb-1.5">Contact</p>
+              <p id="contact-email" class="font-[family-name:var(--font-source-serif)] text-[15px] text-[#1e3a5f]">
+                <span class="select-none" aria-hidden="true">doc-spike</span><!--
+                --><span class="hidden">REMOVE</span><!--
+                --><span class="select-none" aria-hidden="true">&#64;</span><!--
+                --><span class="select-none" aria-hidden="true">imperial.ac.uk</span>
+              </p>
+              <script>
+                {const el=document.getElementById('contact-email');if(el){const a=document.createElement('a');const u=['doc-spike','imperial.ac.uk'].join('@');a.href='mai'+'lto:'+u;a.textContent=u;a.className='hover:underline decoration-[#c0533d]/30 underline-offset-2 hover:decoration-[#c0533d] transition-colors duration-200';el.replaceChildren(a);}}
+              </script>
+            </div>
+          </div>
         </div>
-        <div>
-          <p class="font-[family-name:var(--font-jetbrains)] text-[9px] tracking-[0.25em] uppercase text-[#1a1a2e]/30 mb-1.5">Contact</p>
-          <p id="contact-email" class="font-[family-name:var(--font-source-serif)] text-[15px] text-[#1e3a5f]">
-            <span class="select-none" aria-hidden="true">doc-spike</span><!--
-            --><span class="hidden">REMOVE</span><!--
-            --><span class="select-none" aria-hidden="true">&#64;</span><!--
-            --><span class="select-none" aria-hidden="true">imperial.ac.uk</span>
-          </p>
-          <script>
-            {const el=document.getElementById('contact-email');if(el){const a=document.createElement('a');const u=['doc-spike','imperial.ac.uk'].join('@');a.href='mai'+'lto:'+u;a.textContent=u;a.className='hover:underline decoration-[#c0533d]/30 underline-offset-2 hover:decoration-[#c0533d] transition-colors duration-200';el.replaceChildren(a);}}
-          </script>
-        </div>
       </div>
+      <img src="/venue-image.jpg" alt="Imperial College London venue" class="hidden md:block h-full w-48 lg:w-56 object-cover" />
     </div>
   </div>
 </section>
