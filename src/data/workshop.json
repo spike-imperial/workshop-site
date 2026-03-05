@@ -39,9 +39,9 @@
     { "time": "12:25", "title": "Lightning Talk 11", "speaker": "TBC", "type": "talk", "abstract": null, "slides": null, "recording": null, "visible": false },
     { "time": "12:35", "title": "Lightning Talk 12", "speaker": "TBC", "type": "talk", "abstract": null, "slides": null, "recording": null, "visible": false },
     { "time": "12:45", "title": "Lightning Talk 13", "speaker": "TBC", "type": "talk", "abstract": null, "slides": null, "recording": null, "visible": false },
-    { "time": "12:30", "title": "Lunch", "type": "break" },
+    { "time": "13:00", "title": "Lunch", "type": "break" },
     { "time": "14:00", "title": "Breakout Sessions", "type": "session" },
-    { "time": "14:30", "title": "Coffee Break", "type": "break" },
+    { "time": "15:30", "title": "Coffee Break", "type": "break" },
     { "time": "15:45", "title": "Report on Breakout Sessions", "type": "session" },
     { "time": "16:15", "title": "Future Directions & Collaborations", "type": "session" },
     { "time": "17:15", "title": "Workshop Concludes", "type": "break" }
