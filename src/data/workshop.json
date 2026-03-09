@@ -27,7 +27,7 @@
   "schedule": [
     { "time": "08:50", "title": "Arrival", "abstract": "Please arrive at reception, on the ground floor of I-HUB by 9am. You will be guided upstairs to the meeting location: Level 6, Lecture Theatres 608 A/B." },
     { "time": "09:00", "title": "Coffee/Tea & Welcome", "type": "break" },
-    { "time": "09:30", "title": "Welcome & Introduction", "speaker": "Alessandra Russo", "abstract": "An overview of the SPIKE group's research agenda and the goals of this workshop, setting the stage for a day of keynote, lightning talks and collaborative breakout sessions on neuro-symbolic AI." },
+    { "time": "09:30", "title": "Welcome & Introduction", "speaker": "Alessandra Russo", "type": "talk", "abstract": "An overview of the SPIKE group's research agenda and the goals of this workshop, setting the stage for a day of keynote, lightning talks and collaborative breakout sessions on neuro-symbolic AI." },
     { "time": "09:40", "title": "Invited Keynote", "speaker": "Luis Lamb", "type": "talk" },
     { "time": "10:30", "title": "Coffee/Tea and Biscuits", "type": "break" },
     { "time": "10:45", "title": "Defining Neurosymbolic Learning and Reasoning", "speaker": "Artur Garcez", "type": "talk" },
