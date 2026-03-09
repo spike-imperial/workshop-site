@@ -11,25 +11,18 @@
     "Identify opportunities for collaboration, particularly around upcoming UK and EU funding calls"
   ],
   "speakers": [
-    { "name": "Alessandra Russo", "role": "Principal Investigator", "affiliation": "Imperial College London", "photo": "/speakers/arusso.jpg", "url": "https://wp.doc.ic.ac.uk/arusso/", "talk": "Welcome & Introduction", "visible": false },
-    { "name": "Luis Lamb", "role": "Invited Keynote Speaker", "affiliation": "Catholic Institute of Technology", "photo": "/speakers/llamb.jpg", "url": null, "talk": "Invited Keynote" },
-    { "name": "Kexin Gu Baugh", "role": "Group Alumnus", "affiliation": null, "photo": "/speakers/kbaugh.jpg", "url": "https://kittykg.github.io/", "talk": null, "visible": false },
-    { "name": "Leo Ardon", "role": "PhD Student", "affiliation": "Imperial College London", "photo": "/speakers/leoardon.png", "url": "https://github.com/leoardon", "talk": null, "visible": false },
-    { "name": "Charles Pert", "role": "PhD Student", "affiliation": "Imperial College London", "photo": "/speakers/cpert.jpg", "url": "https://github.com/pertcj", "talk": null, "visible": false },
-    { "name": "Frederik Kelbel", "role": "PhD Student", "affiliation": "Imperial College London", "photo": "/speakers/fkelbel.png", "url": "https://github.com/FreditorK", "talk": null, "visible": false },
-    { "name": "Roko Parac", "role": "PhD Student", "affiliation": "Imperial College London", "photo": "/speakers/rparac.jpg", "url": null, "talk": null, "visible": false },
-    { "name": "Alex Spies", "role": "Group Alumnus", "affiliation": null, "photo": "/speakers/aspies.png", "url": "https://afspies.com/", "talk": null, "visible": false }
-
-
-
-
-
-
-
-
-
-
-
+    { "name": "Alessandra Russo", "role": "Principal Investigator", "affiliation": "Imperial College London", "photo": "/speakers/arusso.jpg", "talk": "Welcome & Introduction" },
+    { "name": "Luis Lamb", "role": "Invited Keynote", "affiliation": "Catholic Institute of Technology", "photo": "/speakers/llamb.jpg", "talk": "Invited Keynote" },
+    { "name": "Artur Garcez", "role": "Professor", "affiliation": "City St George's, University of London", "photo": "/speakers/agarcez.jpg", "talk": "Defining Neurosymbolic Learning and Reasoning" },
+    { "name": "Jorge Lobo", "role": "Professor", "affiliation": "Catalan Institution for Research and Advanced Studies / Universitat Pompeu Fabra", "photo": "/speakers/jlobo.jpg", "talk": "Exploiting balanced neural network dynamics for probabilistic computations" },
+    { "name": "Francesca Toni", "role": "Professor", "affiliation": "Imperial College London", "photo": "/speakers/ftoni.jpg", "talk": "Neuro-Argumentative Learning" },
+    { "name": "Adam Dejl", "role": "PhD Student", "affiliation": "Imperial College London", "photo": "/speakers/adejl.jpg", "talk": "Argumentation for Explainable and Globally Contestable Decision Support with LLMs" },
+    { "name": "Kostas Stathis", "role": "Professor", "affiliation": "Royal Holloway, University of London", "photo": "/speakers/kstathis.jpg", "talk": "Autoformalization and Neuro-Symbolic Systems" },
+    { "name": "Roko Parac", "role": "PhD Student", "affiliation": "Imperial College London", "photo": "/speakers/rparac.jpg", "talk": "Autoformalization and Neuro-Symbolic Systems" },
+    { "name": "Celeste Veronese", "role": "PhD Student", "affiliation": "University of Verona", "photo": "/speakers/cveronese.jpg", "talk": "Symbolic Heuristic Guidance for Efficient Decision-Making" },
+    { "name": "Lachlan McPheat", "role": "Research Associate", "affiliation": "The Alan Turing Institute", "photo": "/speakers/lmcpheat.jpg", "talk": "Uncertainty aware symbolic scaffolds for LLMs" },
+    { "name": "Soteris Demetriou", "role": "Associate Professor", "affiliation": "Imperial College London", "photo": "/speakers/sdemetriou.jpg", "talk": "Novel Attack Surfaces and Safeguards in Text-Guided Diffusion-Based Image Generation" },
+    { "name": "Mohammad Albinhassan", "role": "PhD Student", "affiliation": "Imperial College London", "photo": "/speakers/malbinhassan.jpg", "talk": "Neuro-Symbolic Control at Decoding Time: Guaranteeing LLM Correctness by Construction" },
   ],
   "schedule": [
     { "time": "08:50", "title": "Arrival", "abstract": "Please arrive at reception, on the ground floor of I-HUB by 9am. You will be guided upstairs to the meeting location." },
@@ -37,19 +30,31 @@
     { "time": "09:30", "title": "Welcome & Introduction", "speaker": "Alessandra Russo", "type": "talk", "abstract": "An overview of the SPIKE group's research agenda and the goals of this workshop, setting the stage for a day of keynote, lightning talks and collaborative breakout sessions on neuro-symbolic AI." },
     { "time": "09:40", "title": "Invited Keynote", "speaker": "Luis Lamb", "type": "talk" },
     { "time": "10:30", "title": "Coffee/Tea and Biscuits", "type": "break" },
-    { "time": "10:45", "title": "Artur Garcez", "type": "talk", "abstract": "Defining Neurosymbolic Learning and Reasoning" },
-    { "time": "11:00", "title": "Jorge Lobo", "type": "talk", "abstract": "Exploiting balanced neural network dynamics for probabilistic computations" },
-    { "time": "11:10", "title": "Francesca Toni", "type": "talk", "abstract": "Neuro-Argumentative Learning" },
-    { "time": "11:20", "title": "Adam Dejl", "type": "talk", "abstract": "Argumentation for Explainable and Globally Contestable Decision Support with LLMs" },
-    { "time": "11:30", "title": "Kostas Stathis", "type": "talk", "abstract": "Autoformalization and Neuro-Symbolic Systems"  },
-    { "time": "11:40", "title": "Alessandra Russo", "type": "talk" },
-    { "time": "11:50", "title": "Roko Parac", "type": "talk", "abstract": "Autoformalization and Neuro-Symbolic Systems" },
-    { "time": "12:00", "title": "Celeste Veronese", "type": "talk", "abstract": "Symbolic Heuristic Guidance for Efficient Decision-Making" },
-    { "time": "12:10", "title": "Lachlan McPheat", "type": "talk", "abstract": "Uncertainty aware symbolic scaffolds for LLMs" },
-    { "time": "12:20", "title": "Soteris Demetriou", "type": "talk", "abstract": "Novel Attack Surfaces and Safeguards in Text-Guided Diffusion-Based Image Generation" },
-    { "time": "12:30", "title": "Mohammad Albinhassan", "type": "talk", "abstract": "Neuro-Symbolic Control at Decoding Time: Guaranteeing LLM Correctness by Construction" },
-    { "time": "12:40", "title": "Eleonora Giunchiglia (student talk)", "type": "talk" },
-    { "time": "12:50", "title": "Eleonora Giunchiglia (student talk)", "type": "talk" },
+    { "time": "10:45", "title": "Defining Neurosymbolic Learning and Reasoning", "speaker": "Artur Garcez", "type": "talk" },
+    { "time": "11:00", "title": "Exploiting balanced neural network dynamics for probabilistic computations", "speaker": "Jorge Lobo", "type": "talk" },
+    { "time": "11:10", "title": "Neuro-Argumentative Learning", "speaker": "Francesca Toni", "type": "talk" },
+    { "time": "11:20", "title": "Argumentation for Explainable and Globally Contestable Decision Support with LLMs", "speaker": "Adam Dejl", "type": "talk", "abstract": "Large language models (LLMs) exhibit strong general capabilities, but their deployment in high-stakes domains is hindered by their opacity and unpredictability. Recent work has taken meaningful steps towards addressing these issues by augmenting LLMs with symbolic post-hoc reasoning based on computational argumentation, providing faithful explanations and enabling users to contest incorrect decisions. However, this paradigm is limited to pre-defined binary choices and only supports local contestation for specific instances, leaving the underlying decision logic unchanged and prone to repeated mistakes.
+
+In this talk, I will introduce ArgEval, a framework that shifts from instance-specific reasoning to structured evaluation of general decision options. Rather than mining arguments solely for individual cases, ArgEval systematically maps task-specific decision spaces, builds corresponding option ontologies, and constructs general argumentation frameworks (AFs) for each option. These frameworks can then be instantiated to provide explainable recommendations for specific cases while still supporting global contestability through modification of the shared AFs. The effectiveness of ArgEval has been demonstrated in the context of providing treatment recommendations for glioblastoma, an aggressive brain tumour, where it was found to produce explainable guidance aligned with clinical practice." },
+    { "time": "11:30", "title": "Automata-based VLM Reward Models", "speaker": "Kostas Stathis", "type": "talk", "abstract": "Reinforcement Learning (RL) has enabled learning remarkable skills in robotics when a well-engineered dense reward function is provided.
+
+However, crafting these reward functions is a challenging task as it usually requir"  },
+    { "time": "11:40", "speaker": "Alessandra Russo", "type": "talk" },
+    { "time": "11:50", "title": "Automata-based VLM Reward Models", "speaker": "Roko Parac", "type": "talk", "abstract": "Reinforcement Learning (RL) has enabled learning remarkable skills in robotics when a well-engineered dense reward function is provided.
+
+However, crafting these reward functions is a challenging task as it usually requires access to true states and domain expertise. As such, a number of recent works has considered incorporating Vision-language models (VLMs) into the procedure with promising early results.
+However, VLM defined rewards often struggle with long-horizon tasks and nor do they incorporate task decomposition. For example, in a task where the agent needs to “move the block to a closed drawer” the VLM would give positive rewards even when the agent does not open the drawer first.
+
+In this talk, we will discuss ideas for incorporating reward machines, an automata representation of the reward in RL, to tackle these challenges." },
+    { "time": "12:00", "title": "Symbolic Heuristic Guidance for Efficient Decision-Making", "speaker": "Celeste Veronese", "type": "talk", "abstract": "Decision-making in complex environments remains challenging when action spaces are large, rewards are sparse, and long-horizon reasoning is required. While Deep Reinforcement Learning (DRL) has achieved impressive results, it often suffers from inefficient exploration and limited interpretability.
+My PhD work investigates how symbolic heuristics can guide planning and DRL to address these limitations. By integrating structured, human-interpretable heuristic knowledge into learning systems, this approach aims to improve learning efficiency and enable more transparent and robust decision-making in complex domains." },
+    { "time": "12:10", "title": "Uncertainty aware symbolic scaffolds for LLMs", "type": "talk", "speaker": "Lachlan McPheat", "abstract": "Symbolic scaffolds for reasoning tasks rely on large language models (LLMs) to translate natural language into formal symbolic representations. Uncertainty in machine learning in general, and natural-to-formal translation in particular, is well documented. We propose a novel method incorporating uncertainties directly into a probabilistic symbolic reasoning process by quantifying uncertainty in the LLM-generated translations and encoding these confidences as imprecise probabilities in probabilistic answer set programming." },
+    { "time": "12:20", "title": "Novel Attack Surfaces and Safeguards in Text-Guided Diffusion-Based Image Generation", "speaker": "Soteris Demetriou", "type": "talk", "abstract": "Text-guided image generation models are now widely deployed, and significant progress has been made in improving their safety and preventing harmful outputs. However, important challenges remain: (a) relatively little attention has been given to privacy risks arising from user prompts, (b) many existing mitigation approaches rely on coarse model modifications that can degrade utility on benign inputs and, (c) they provide limited or unfaithful explanations into why certain behaviours are suppressed.
+
+In this talk, I present recent and ongoing work exploring these challenges. First, I show how diffusion-based image generation systems can enable prompt authorship attribution and dementia inference, illustrating how generative models may unintentionally reveal sensitive information about users. I then present DiDOTS, a prompt-sanitization approach that leverages knowledge distillation to paraphrase prompts while preserving their generation intent. Finally, I outline ongoing work on localized concept unlearning and argumentation-based evaluation frameworks, which aim to enable targeted model edits while maintaining benign utility and providing more interpretable safety decisions in generative AI systems. " },
+    { "time": "12:30", "title": "Neuro-Symbolic Control at Decoding Time: Guaranteeing LLM Correctness by Construction", "speaker": "Mohammad Albinhassan", "type": "talk", "abstract": "Large Language Models have demonstrated remarkable capabilities across diverse tasks, yet ensuring the correctness of their outputs remains a fundamental challenge. Existing approaches to controlled generation, whether through syntactic constraints, domain-specific rules, or search-based reasoning, fall short of providing the expressivity and formal guarantees needed for reliable real-world deployment. In this talk, I present a line of work that addresses this gap by directly integrating symbolic reasoning and neural language generation at decoding time. I first introduce SEM-CTRL, a framework that leverages Answer Set Grammars, a logic-based formalism extending CFGs with semantic constraints expressed in Answer Set Programming, to enforce both validity and correctness during LLM generation. By combining token-level constraint verification with Monte Carlo Tree Search guided by domain-specific rewards, SEM-CTRL guarantees that every generated output is semantically valid by construction, while efficiently searching for correct solutions. I then show how the need for manual constraint specification can be eliminated entirely: through a two-phase process of syntactic exploration and constraint exploitation, context-sensitive constraints can be automatically learned from LLM interactions and an oracle, making the approach more accessible and adaptive. Across tasks spanning grammar synthesis, combinatorial reasoning, JSON parsing, and planning, this neuro-symbolic approach enables even small off-the-shelf LLMs (1B parameters) to consistently outperform much larger models and state-of-the-art reasoning systems; thereby providing formal correctness guarantees that neither scale nor inference-time reasoning alone can achieve." },
+    { "time": "12:40", "title": "Student Talk (Eleonora Giunchiglia)", "type": "talk" },
+    { "time": "12:50", "title": "Student Talk (Eleonora Giunchiglia)", "type": "talk" },
     { "time": "13:00", "title": "Lunch", "type": "break" },
     { "time": "14:00", "title": "Breakout Sessions", "type": "session" },
     { "time": "15:30", "title": "Coffee/Tea and Biscuits", "type": "break" },
