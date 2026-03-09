@@ -12,17 +12,7 @@
   ],
   "speakers": [
     { "name": "Alessandra Russo", "role": "Principal Investigator", "affiliation": "Imperial College London", "photo": "/speakers/arusso.jpg", "talk": "Welcome & Introduction" },
-    { "name": "Luis Lamb", "role": "Invited Keynote", "affiliation": "Catholic Institute of Technology", "photo": "/speakers/llamb.jpg", "talk": "Invited Keynote" },
-    { "name": "Artur Garcez", "role": "Professor", "affiliation": "City St George's, University of London", "photo": "/speakers/agarcez.jpg", "talk": "Defining Neurosymbolic Learning and Reasoning" },
-    { "name": "Jorge Lobo", "role": "Professor", "affiliation": "Catalan Institution for Research and Advanced Studies / Universitat Pompeu Fabra", "photo": "/speakers/jlobo.jpg", "talk": "Exploiting balanced neural network dynamics for probabilistic computations" },
-    { "name": "Francesca Toni", "role": "Professor", "affiliation": "Imperial College London", "photo": "/speakers/ftoni.jpg", "talk": "Neuro-Argumentative Learning" },
-    { "name": "Adam Dejl", "role": "PhD Student", "affiliation": "Imperial College London", "photo": "/speakers/adejl.jpg", "talk": "Argumentation for Explainable and Globally Contestable Decision Support with LLMs" },
-    { "name": "Kostas Stathis", "role": "Professor", "affiliation": "Royal Holloway, University of London", "photo": "/speakers/kstathis.jpg", "talk": "Autoformalization and Neuro-Symbolic Systems" },
-    { "name": "Roko Parac", "role": "PhD Student", "affiliation": "Imperial College London", "photo": "/speakers/rparac.jpg", "talk": "Autoformalization and Neuro-Symbolic Systems" },
-    { "name": "Celeste Veronese", "role": "PhD Student", "affiliation": "University of Verona", "photo": "/speakers/cveronese.jpg", "talk": "Symbolic Heuristic Guidance for Efficient Decision-Making" },
-    { "name": "Lachlan McPheat", "role": "Research Associate", "affiliation": "The Alan Turing Institute", "photo": "/speakers/lmcpheat.jpg", "talk": "Uncertainty aware symbolic scaffolds for LLMs" },
-    { "name": "Soteris Demetriou", "role": "Associate Professor", "affiliation": "Imperial College London", "photo": "/speakers/sdemetriou.jpg", "talk": "Novel Attack Surfaces and Safeguards in Text-Guided Diffusion-Based Image Generation" },
-    { "name": "Mohammad Albinhassan", "role": "PhD Student", "affiliation": "Imperial College London", "photo": "/speakers/malbinhassan.jpg", "talk": "Neuro-Symbolic Control at Decoding Time: Guaranteeing LLM Correctness by Construction" }
+    { "name": "Luis Lamb", "role": "Invited Keynote", "affiliation": "Catholic Institute of Technology", "photo": "/speakers/llamb.jpg", "talk": "Invited Keynote" }
   ],
   "schedule": [
     { "time": "08:50", "title": "Arrival", "abstract": "Please arrive at reception, on the ground floor of I-HUB by 9am. You will be guided upstairs to the meeting location." },
