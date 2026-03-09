@@ -11,7 +11,7 @@
     "Identify opportunities for collaboration, particularly around upcoming UK and EU funding calls"
   ],
   "speakers": [
-    { "name": "Prof. Alessandra Russo", "role": "Principal Investigator", "affiliation": "Imperial College London", "photo": "/speakers/arusso.jpg", "url": "https://wp.doc.ic.ac.uk/arusso/", "talk": "Welcome & Introduction", "visible": false },
+    { "name": "Alessandra Russo", "role": "Principal Investigator", "affiliation": "Imperial College London", "photo": "/speakers/arusso.jpg", "url": "https://wp.doc.ic.ac.uk/arusso/", "talk": "Welcome & Introduction", "visible": false },
     { "name": "Luis Lamb", "role": "Invited Keynote Speaker", "affiliation": "Catholic Institute of Technology", "photo": "/speakers/llamb.jpg", "url": null, "talk": "Invited Keynote" },
     { "name": "Kexin Gu Baugh", "role": "Group Alumnus", "affiliation": null, "photo": "/speakers/kbaugh.jpg", "url": "https://kittykg.github.io/", "talk": null, "visible": false },
     { "name": "Leo Ardon", "role": "PhD Student", "affiliation": "Imperial College London", "photo": "/speakers/leoardon.png", "url": "https://github.com/leoardon", "talk": null, "visible": false },
@@ -23,13 +23,16 @@
   "schedule": [
     { "time": "08:50", "title": "Arrival", "type": "arrival" },
     { "time": "09:00", "title": "Coffee/Tea & Welcome", "type": "welcome" },
-    { "time": "10:30", "title": "Morning Coffee/Tea and Biscuits", "type": "break" },
-    { "time": "10:45", "title": "Prof. Artur Garcez", "type": "talk" },
-    { "time": "11:00", "title": "Prof. Jorge Lobo", "type": "talk" },
-    { "time": "11:10", "title": "Prof. Francesca Toni", "type": "talk" },
+    { "time": "09:30", "title": "Welcome & Introduction", "speaker": "Alessandra Russo", "type": "talk", "abstract": "An overview of the SPIKE group's research agenda and the goals of this workshop, setting the stage for a day of keynote, lightning talks and collaborative breakout sessions on neuro-symbolic AI." },
+    { "time": "09:40", "title": "Invited Keynote", "speaker": "Luis Lamb", "type": "talk" },
+    { "time": "10:30", "title": "Coffee/Tea and Biscuits", "type": "break" },
+    { "time": "10:45", "title": "Lightning Talks", "type": "talk" },
+    { "time": "10:45", "title": "Artur Garcez", "type": "talk" },
+    { "time": "11:00", "title": "Jorge Lobo", "type": "talk" },
+    { "time": "11:10", "title": "Francesca Toni", "type": "talk" },
     { "time": "11:20", "title": "Adam Dejl", "type": "talk" },
-    { "time": "11:30", "title": "Prof. Kostas Statis", "type": "talk" },
-    { "time": "11:40", "title": "Prof. Alessandra Russo", "type": "talk" },
+    { "time": "11:30", "title": "Kostas Statis", "type": "talk" },
+    { "time": "11:40", "title": "Alessandra Russo", "type": "talk" },
     { "time": "11:50", "title": "Roko Parac", "type": "talk" },
     { "time": "12:00", "title": "Celeste Veronese", "type": "talk" },
     { "time": "12:10", "title": "Lachlan McPheat", "type": "talk" },
@@ -39,7 +42,7 @@
     { "time": "12:50", "title": "Eleonora Giunchiglia (student talk)", "type": "talk" },
     { "time": "13:00", "title": "Lunch", "type": "break" },
     { "time": "14:00", "title": "Breakout Sessions", "type": "session" },
-    { "time": "15:30", "title": "Final Coffee/Tea and Biscuits", "type": "break" },
+    { "time": "15:30", "title": "Coffee/Tea and Biscuits", "type": "break" },
     { "time": "15:45", "title": "Breakout Sessions", "type": "session" },
     { "time": "17:00", "title": "Workshop Concludes", "type": "end" }
   ]
