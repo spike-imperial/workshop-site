@@ -25,7 +25,7 @@
     { "name": "Mohammad Albinhassan", "role": "PhD Student", "affiliation": "Imperial College London", "photo": "/speakers/malbinhassan.jpg", "talk": "Neuro-Symbolic Control at Decoding Time: Guaranteeing LLM Correctness by Construction" }
   ],
   "schedule": [
-    { "time": "08:50", "title": "Arrival", "abstract": "Please arrive at reception, on the ground floor of I-HUB by 9am. You will be guided upstairs to the meeting location: Level 6, Lecture Theatres 608 A/B" },
+    { "time": "08:50", "title": "Arrival", "abstract": "Please arrive at reception, on the ground floor of I-HUB by 9am. You will be guided upstairs to the meeting location: Level 6, Lecture Theatres 608 A/B." },
     { "time": "09:00", "title": "Coffee/Tea & Welcome", "type": "break" },
     { "time": "09:30", "title": "Welcome & Introduction", "speaker": "Alessandra Russo", "type": "talk", "abstract": "An overview of the SPIKE group's research agenda and the goals of this workshop, setting the stage for a day of keynote, lightning talks and collaborative breakout sessions on neuro-symbolic AI." },
     { "time": "09:40", "title": "Invited Keynote", "speaker": "Luis Lamb", "type": "talk" },
@@ -44,8 +44,8 @@
     { "time": "12:40", "title": "Student Talk (Eleonora Giunchiglia)", "type": "talk" },
     { "time": "12:50", "title": "Student Talk (Eleonora Giunchiglia)", "type": "talk" },
     { "time": "13:00", "title": "Lunch", "type": "break" },
-    { "time": "14:00", "title": "Breakout Sessions", "type": "session", "abstract": "Level 5, Meeting Room 3 / Level 6, Meeting Room 6" },
-    { "time": "15:30", "title": "Coffee/Tea and Biscuits", "type": "break", "abstract": "Level 5, Conference Room" },
+    { "time": "14:00", "title": "Breakout Sessions", "type": "session" },
+    { "time": "15:30", "title": "Coffee/Tea and Biscuits", "type": "break" },
     { "time": "15:45", "title": "Breakout Sessions", "type": "session" },
     { "time": "17:00", "title": "Workshop Concludes", "type": "end" }
   ]
