@@ -21,12 +21,11 @@
     { "name": "Alex Spies", "role": "Group Alumnus", "affiliation": null, "photo": "/speakers/aspies.png", "url": "https://afspies.com/", "talk": null, "visible": false }
   ],
   "schedule": [
-    { "time": "08:50", "title": "Arrival", "type": "arrival" },
-    { "time": "09:00", "title": "Coffee/Tea & Welcome", "type": "welcome" },
+    { "time": "08:50", "title": "Arrival" },
+    { "time": "09:00", "title": "Coffee/Tea & Welcome", "type": "break" },
     { "time": "09:30", "title": "Welcome & Introduction", "speaker": "Alessandra Russo", "type": "talk", "abstract": "An overview of the SPIKE group's research agenda and the goals of this workshop, setting the stage for a day of keynote, lightning talks and collaborative breakout sessions on neuro-symbolic AI." },
     { "time": "09:40", "title": "Invited Keynote", "speaker": "Luis Lamb", "type": "talk" },
     { "time": "10:30", "title": "Coffee/Tea and Biscuits", "type": "break" },
-    { "time": "10:45", "title": "Lightning Talks", "type": "talk" },
     { "time": "10:45", "title": "Artur Garcez", "type": "talk" },
     { "time": "11:00", "title": "Jorge Lobo", "type": "talk" },
     { "time": "11:10", "title": "Francesca Toni", "type": "talk" },
