@@ -45,7 +45,7 @@
     { "time": "12:50", "title": "Student Talk (Eleonora Giunchiglia)", "type": "talk" },
     { "time": "13:00", "title": "Lunch", "type": "break" },
     { "time": "14:00", "title": "Breakout Sessions", "type": "session", "abstract": "Level 5, Meeting Room 3 / Level 6, Meeting Room 6" },
-    { "time": "15:30", "title": "Coffee/Tea and Biscuits", "type": "break", "abstract: "Level 5, Conference Room" },
+    { "time": "15:30", "title": "Coffee/Tea and Biscuits", "type": "break", "abstract": "Level 5, Conference Room" },
     { "time": "15:45", "title": "Breakout Sessions", "type": "session" },
     { "time": "17:00", "title": "Workshop Concludes", "type": "end" }
   ]
