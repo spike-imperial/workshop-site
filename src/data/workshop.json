@@ -19,24 +19,35 @@
     { "name": "Frederik Kelbel", "role": "PhD Student", "affiliation": "Imperial College London", "photo": "/speakers/fkelbel.png", "url": "https://github.com/FreditorK", "talk": null, "visible": false },
     { "name": "Roko Parac", "role": "PhD Student", "affiliation": "Imperial College London", "photo": "/speakers/rparac.jpg", "url": null, "talk": null, "visible": false },
     { "name": "Alex Spies", "role": "Group Alumnus", "affiliation": null, "photo": "/speakers/aspies.png", "url": "https://afspies.com/", "talk": null, "visible": false }
+
+
+
+
+
+
+
+
+
+
+
   ],
   "schedule": [
-    { "time": "08:50", "title": "Arrival" },
+    { "time": "08:50", "title": "Arrival", "abstract": "Please arrive at reception, on the ground floor of I-HUB by 9am. You will be guided upstairs to the meeting location." },
     { "time": "09:00", "title": "Coffee/Tea & Welcome", "type": "break" },
     { "time": "09:30", "title": "Welcome & Introduction", "speaker": "Alessandra Russo", "type": "talk", "abstract": "An overview of the SPIKE group's research agenda and the goals of this workshop, setting the stage for a day of keynote, lightning talks and collaborative breakout sessions on neuro-symbolic AI." },
     { "time": "09:40", "title": "Invited Keynote", "speaker": "Luis Lamb", "type": "talk" },
     { "time": "10:30", "title": "Coffee/Tea and Biscuits", "type": "break" },
-    { "time": "10:45", "title": "Artur Garcez", "type": "talk" },
-    { "time": "11:00", "title": "Jorge Lobo", "type": "talk" },
-    { "time": "11:10", "title": "Francesca Toni", "type": "talk" },
-    { "time": "11:20", "title": "Adam Dejl", "type": "talk" },
-    { "time": "11:30", "title": "Kostas Statis", "type": "talk" },
+    { "time": "10:45", "title": "Artur Garcez", "type": "talk", "abstract": "Defining Neurosymbolic Learning and Reasoning" },
+    { "time": "11:00", "title": "Jorge Lobo", "type": "talk", "abstract": "Exploiting balanced neural network dynamics for probabilistic computations" },
+    { "time": "11:10", "title": "Francesca Toni", "type": "talk", "abstract": "Neuro-Argumentative Learning" },
+    { "time": "11:20", "title": "Adam Dejl", "type": "talk", "abstract": "Argumentation for Explainable and Globally Contestable Decision Support with LLMs" },
+    { "time": "11:30", "title": "Kostas Stathis", "type": "talk", "abstract": "Autoformalization and Neuro-Symbolic Systems"  },
     { "time": "11:40", "title": "Alessandra Russo", "type": "talk" },
-    { "time": "11:50", "title": "Roko Parac", "type": "talk" },
-    { "time": "12:00", "title": "Celeste Veronese", "type": "talk" },
-    { "time": "12:10", "title": "Lachlan McPheat", "type": "talk" },
-    { "time": "12:20", "title": "Soteris Demetriou", "type": "talk" },
-    { "time": "12:30", "title": "Mohammad Albinhassan", "type": "talk" },
+    { "time": "11:50", "title": "Roko Parac", "type": "talk", "abstract": "Autoformalization and Neuro-Symbolic Systems" },
+    { "time": "12:00", "title": "Celeste Veronese", "type": "talk", "abstract": "Symbolic Heuristic Guidance for Efficient Decision-Making" },
+    { "time": "12:10", "title": "Lachlan McPheat", "type": "talk", "abstract": "Uncertainty aware symbolic scaffolds for LLMs" },
+    { "time": "12:20", "title": "Soteris Demetriou", "type": "talk", "abstract": "Novel Attack Surfaces and Safeguards in Text-Guided Diffusion-Based Image Generation" },
+    { "time": "12:30", "title": "Mohammad Albinhassan", "type": "talk", "abstract": "Neuro-Symbolic Control at Decoding Time: Guaranteeing LLM Correctness by Construction" },
     { "time": "12:40", "title": "Eleonora Giunchiglia (student talk)", "type": "talk" },
     { "time": "12:50", "title": "Eleonora Giunchiglia (student talk)", "type": "talk" },
     { "time": "13:00", "title": "Lunch", "type": "break" },
